@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Home page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4">Prima mea aplicatie ASP.NET Core MVC</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<h2>Test Controller SalutController1</h2>
+
+<ul>
+    <li><a asp-controller="SalutController1" asp-action="Index">Mesaj de bun venit</a></li>
+    <li><a asp-controller="SalutController1" asp-action="Salut">Mesaj de salut</a></li>
+</ul>
+
+@*Metoda 3 (string + int)*@
+<form asp-controller="SalutController1" asp-action="AfiseazaDate" method="get">
+    <label>Text:</label>
+    <input type="text" name="text" />
+
+    <label>Numar:</label>
+    <input type="number" name="numar" />
+
+    <button type="submit">Trimite</button>
+</form>
+
